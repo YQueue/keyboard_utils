@@ -88,11 +88,13 @@ class KeyboardUtilsPlugin : FlutterPlugin, ActivityAware, EventChannel.StreamHan
                 override fun open(height: Int) {
                     val tempHeight = DisplayUtil.pxTodp(activity, height.toFloat())
                     val resultJSON = KeyboardOptions(isKeyboardOpen = true, height = tempHeight)
+//                    println(">>> KeyboardUtils: keyboard open")
                     events?.success(resultJSON.toJson())
                 }
 
                 override fun hide() {
                     val resultJSON = KeyboardOptions(isKeyboardOpen = false, height = 0)
+//                    println(">>> KeyboardUtils: keyboard hide")
                     events?.success(resultJSON.toJson())
                 }
             })

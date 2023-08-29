@@ -2,8 +2,6 @@ package br.com.keyboard_utils.keyboard;
 
 import android.app.Activity;
 import android.os.Build;
-import android.view.View;
-import android.view.WindowInsets;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.view.WindowInsetsCompat;
@@ -46,7 +44,7 @@ public class KeyboardAbove31Utils {
             boolean hasNavigationBar = insets.isVisible(WindowInsetsCompat.Type.navigationBars()) &&
                     insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom > 0;
             int height = hasNavigationBar ? Math.max(imeHeight - navHeight, 0) : imeHeight;
-            System.out.println("test 软键盘 31以上 height=" + height);
+            //System.out.println(">>> KeyboardUtils: keyboard height = " + height);
             if (height == 0) {
                 listener.hide();
             } else {

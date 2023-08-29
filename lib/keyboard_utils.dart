@@ -31,6 +31,7 @@ class KeyboardUtils {
   bool get isKeyboardOpen => _keyboardOptions?.isKeyboardOpen ?? false;
 
   void _onKeyboardListener(Object? data) {
+    debugPrint('>>>> _onKeyboardListener update');
     final keyboardOptions = _decodeDataToKeyboardOptions(data: data);
     KeyboardUtils._updateKeyboardOptionsWith(
       newKeyboardOptions: keyboardOptions,

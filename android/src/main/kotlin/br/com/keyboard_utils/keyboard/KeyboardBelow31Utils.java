@@ -80,7 +80,7 @@ public class KeyboardBelow31Utils {
         getNavigationBarHeight((height, hasNav) -> {
             mNavHeight = height;
             mHasNav = hasNav;
-            System.out.println("test 导航 height=" + height + " mHasNav=" + mHasNav);
+            //System.out.println(">>> KeyboardUtils: Nav bar height: " + height + ", has nav bar:" + mHasNav);
             contentView.getViewTreeObserver().addOnGlobalLayoutListener(onGlobalLayoutListener);
         });
 
@@ -103,7 +103,7 @@ public class KeyboardBelow31Utils {
             public void onFinish() {
                 int height = getDecorViewInvisibleHeight();
                 int tempHeight = mHasNav ? Math.max(height - mNavHeight, 0) : height;
-                System.out.println("test 软键盘 31以下 tempHeight=" + tempHeight);
+                //System.out.println(">>> KeyboardUtils: keyboard height = " + tempHeight);
                 if (tempHeight == 0) {
                     listener.hide();
                 } else {
