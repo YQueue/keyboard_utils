@@ -39,11 +39,9 @@ class _KeyboardAwareState extends State<KeyboardAware> {
       listener: KeyboardListener(
         willHideKeyboard: () {
           setState(() {});
-          debugPrint('>>>> willHideKeyboard');
         },
         willShowKeyboard: (double keyboardHeight) {
           setState(() {});
-          debugPrint('>>>> willShowKeyboard');
         },
       ),
     );
